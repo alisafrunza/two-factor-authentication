@@ -1,0 +1,15 @@
+<div class="col-lg-4 col-lg-offset-4 col-sm-8">
+  <div class="col-lg-offset-5">
+		<p class="lead">Please verify your OTP</p>
+
+		<%= form_for "", url: users_sessions_verify_otp_path, method: :post do |f| %>
+		  <%= f.label :otp_attempt %>
+		  <div class="form-group">
+        <div class="field">
+				  <%= f.text_field :otp_attempt %>
+				</div>
+			</div>
+		  <%= f.submit "Verify", class: "btn btn-default" %>
+		<% end %>
+	</div>
+</div>
